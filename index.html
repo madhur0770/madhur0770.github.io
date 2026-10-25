@@ -3,196 +3,305 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Madhur Kumar Rana | AI/ML, Data Science and Software Engineering</title>
-<meta name="description" content="Madhur Kumar Rana, M.Tech student in Artificial Intelligence and Data Science at MNNIT Allahabad. Machine learning research, full-stack and LLM projects with source code and live demos.">
-<meta property="og:title" content="Madhur Kumar Rana">
-<meta property="og:description" content="AI/ML, data science and software engineering. Projects with source code and live demos.">
+<title>Madhur Kumar Rana | Software Engineer, AI/ML and Data Science</title>
+<meta name="description" content="Madhur Kumar Rana is a software engineer building full-stack web apps and machine-learning systems. Projects with source code and live demos.">
+<meta property="og:title" content="Madhur Kumar Rana, software engineer">
+<meta property="og:description" content="Full-stack web apps and machine-learning systems, shipped with tests, CI and live demos.">
 <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f8f9f7; --ink:#14232b; --muted:#4c5d66; --rule:#cfd8d9; --link:#0b6670; --link-hover:#074850; --panel:#eef3f2;
-  --serif:Charter,"Bitstream Charter","Sitka Text",Cambria,Georgia,serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{--paper:#10191d; --ink:#e8eeee; --muted:#9fb0b6; --rule:#2b3a40; --link:#6cc4cc; --link-hover:#a4e0e5; --panel:#17242a;}
+  --blue:#2a3df0; --blue-deep:#1b2bc4; --ink:#0d1230; --muted:#565d7c; --paper:#ffffff; --mist:#f1f3fb; --line:#dde1f0; --lemon:#ffd84a;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --text:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.6 var(--sans)}
-a{color:var(--link);text-underline-offset:.18em}
-a:hover{color:var(--link-hover)}
-a:focus-visible{outline:3px solid var(--link);outline-offset:3px;border-radius:2px}
-.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
-h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.01em;line-height:1.15;margin:0}
-h1{font-size:clamp(2.4rem,6.5vw,4.25rem)}
-h2{font-size:1.75rem;margin-bottom:1.25rem}
-h3{font-size:1.3rem}
-p{margin:0 0 1rem;max-width:62ch}
-header.hero{padding:clamp(2.5rem,7vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
-.hero .wrap{display:grid;gap:2.5rem;grid-template-columns:1.15fr .85fr;align-items:center}
-.role{font-family:var(--serif);font-size:clamp(1.15rem,2.4vw,1.5rem);color:var(--muted);margin:.9rem 0 1.25rem}
-.lede{font-size:1.125rem}
-.links{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin:1.5rem 0 0;padding:0;list-style:none;font-weight:600}
-.figure{margin:0}
-.figure img{display:block;width:100%;height:auto;border-radius:3px;border:1px solid var(--rule)}
-.figure figcaption{font-size:.9rem;color:var(--muted);margin-top:.6rem;max-width:44ch}
-section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--rule)}
-.compare{width:100%;max-width:44rem;border-collapse:collapse;margin:1rem 0 1.25rem;font-size:1rem}
-.compare caption{text-align:left;color:var(--muted);font-size:.9rem;padding-bottom:.5rem}
-.compare th,.compare td{padding:.55rem .75rem .55rem 0;border-bottom:1px solid var(--rule);text-align:left;font-weight:400}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.6 var(--text)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lemon);outline-offset:3px}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-.02em}
+p{margin:0 0 1rem}
+
+/* hero */
+.hero{background:var(--blue);color:#fff;overflow:hidden}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 0;font-weight:600}
+.nav .brand{font-family:var(--display);font-weight:800;font-size:1.1rem;text-decoration:none}
+.nav ul{display:flex;gap:1.5rem;margin:0;padding:0;list-style:none}
+.nav a{text-decoration:none}
+.nav a:hover{text-decoration:underline;text-underline-offset:.25em}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:2.5rem;align-items:center;padding:clamp(2rem,6vw,4.5rem) 0 clamp(3rem,7vw,5.5rem)}
+.hero h1{font-size:clamp(3rem,8.4vw,6.4rem);font-weight:800}
+.hero .role{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3.2vw,2.2rem);color:var(--lemon);margin:1.1rem 0 1.2rem;line-height:1.15;letter-spacing:-.01em}
+.hero .lede{font-size:1.2rem;max-width:34rem;color:#e6e9ff}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.75rem}
+.btn{display:inline-block;padding:.7rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid #fff;color:#fff}
+.btn:hover{background:#fff;color:var(--blue)}
+.btn.primary{background:var(--lemon);border-color:var(--lemon);color:var(--ink)}
+.btn.primary:hover{background:#fff;border-color:#fff}
+.stack{position:relative;min-height:26rem}
+.stack .win{position:absolute;box-shadow:0 18px 40px rgba(5,10,80,.45)}
+.stack .win.a{left:0;top:2.5rem;width:72%}
+.stack .win.b{right:0;top:0;width:58%;z-index:2}
+.stack .win.c{right:6%;bottom:0;width:60%;z-index:3}
+
+/* window frame for screenshots */
+.win{background:#fff;border-radius:10px;overflow:hidden;border:1px solid rgba(13,18,48,.12)}
+.win .bar{display:flex;gap:.35rem;padding:.55rem .7rem;background:#e9ecf7}
+.win .bar i{width:.6rem;height:.6rem;border-radius:50%;background:#b9c0dc;display:block}
+.win img{display:block;width:100%;height:auto}
+
+/* facts strip */
+.facts{background:var(--mist);border-bottom:1px solid var(--line)}
+.facts ul{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:.4rem 2rem;margin:0;padding:1rem 0;list-style:none;font-weight:600}
+@media (max-width:900px){.facts ul{grid-template-columns:1fr}}
+
+section.block{padding:clamp(3rem,7vw,5rem) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.sec-head h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800}
+.sec-head p{color:var(--muted);max-width:30rem;margin:0}
+
+/* projects */
+.feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:2.5rem;align-items:center;margin-bottom:3.5rem}
+.feature.flip{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.feature.flip .shots{order:2}
+.shots{position:relative}
+.shots .phone{position:absolute;right:-1rem;bottom:-1.5rem;width:24%;height:auto;border-radius:18px;box-shadow:0 14px 30px rgba(13,18,48,.35);border:4px solid var(--ink);background:#fff}
+.tag{display:inline-block;font-weight:700;font-size:.9rem;background:var(--mist);border:1px solid var(--line);padding:.15rem .7rem;border-radius:999px;margin-bottom:.8rem}
+.feature h3,.card h3{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:800;margin-bottom:.8rem}
+.card h3{font-size:1.75rem}
+.points{margin:0 0 1rem;padding-left:1.15rem}
+.points li{margin-bottom:.35rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.25rem;padding:0}
+.chips li{font-size:.88rem;font-weight:600;background:var(--mist);border-radius:6px;padding:.15rem .6rem;color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:.6rem}
+.links a{display:inline-block;padding:.5rem 1.05rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.links a:hover{background:var(--ink);color:#fff}
+.links a.live{background:var(--blue);border-color:var(--blue);color:#fff}
+.links a.live:hover{background:var(--blue-deep);border-color:var(--blue-deep)}
+.note{font-size:.92rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3rem 2.5rem;margin-bottom:3.5rem}
+.card .win{margin-bottom:1.25rem}
+.compare{border-collapse:collapse;width:100%;margin:0 0 1rem;font-size:.98rem}
+.compare th,.compare td{padding:.45rem .5rem .45rem 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
 .compare thead th{font-weight:700}
 .compare td:nth-child(n+2),.compare th:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums}
 .compare td:last-child{font-weight:700}
-.row{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.75rem 2rem;padding:1.4rem 0;border-bottom:1px solid var(--rule)}
-.row:first-of-type{padding-top:.4rem}
-.row .meta{color:var(--muted);font-size:.95rem;margin:.35rem 0 0}
-.row p{margin-bottom:.6rem}
-.row ul.l{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;list-style:none;margin:.2rem 0 0;padding:0;font-weight:600}
-.skills{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.55rem 2rem;margin:0}
-.skills dt{font-weight:700}
-.skills dd{margin:0}
-.edu p{margin-bottom:.5rem}
-.edu .sub{color:var(--muted)}
-footer{padding:2.5rem 0 3.5rem;border-top:1px solid var(--rule)}
-footer p{max-width:none}
-@media (max-width:760px){
-  .hero .wrap{grid-template-columns:1fr}
-  .figure{order:2}
-  .row,.skills{grid-template-columns:1fr}
-  .skills dt{margin-top:.6rem}
+
+/* skills */
+.skills-bg{background:var(--ink);color:#fff}
+.skills-bg h2{color:#fff}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
+.skills h3{font-size:1.4rem;margin-bottom:.9rem;color:var(--lemon)}
+.skills .chips li{background:rgba(255,255,255,.1);color:#fff}
+
+/* about + contact */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem}
+.about h3{font-size:1.5rem;margin-bottom:.6rem}
+.cta{background:var(--blue);color:#fff;text-align:left}
+.cta h2{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;max-width:40rem}
+.cta p{font-size:1.15rem;max-width:36rem;color:#e6e9ff;margin-top:1rem}
+footer{padding:1.5rem 0 2rem;color:var(--muted);font-size:.95rem}
+
+@media (max-width:900px){
+  .hero-grid,.feature,.feature.flip,.about{grid-template-columns:1fr}
+  .feature.flip .shots{order:0}
+  .grid{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr}
+  .stack{min-height:0}
+  .stack .win{position:static;width:100%!important;margin-bottom:1rem}
+  .stack .win.b,.stack .win.c{display:none}
+  .nav ul{gap:1rem;font-size:.95rem}
+  .shots .phone{width:28%;right:.25rem;bottom:-1rem}
 }
+@media (max-width:480px){.nav ul li:nth-child(n+3){display:none}}
 </style>
 </head>
 <body>
+
 <header class="hero">
   <div class="wrap">
-    <div>
-      <h1>Madhur Kumar Rana</h1>
-      <p class="role">AI/ML, data science and software engineering</p>
-      <p class="lede">I am an M.Tech student in Artificial Intelligence and Data Science at MNNIT Allahabad. I build machine-learning systems and the software around them, and I test and document what I build. My current research is automatic glaucoma detection from retina photographs.</p>
-      <ul class="links">
-        <li><a href="https://github.com/madhur0770">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/madhur-rana-1a9b843a7">LinkedIn</a></li>
-        <li><a href="mailto:madhur0770@gmail.com">madhur0770@gmail.com</a></li>
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top">Madhur Kumar Rana</a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="assets/Madhur_Kumar_Rana_CV.pdf">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+    </nav>
+    <div class="hero-grid" id="top">
+      <div>
+        <h1>Madhur Kumar Rana</h1>
+        <p class="role">Software engineer. AI/ML and data science.</p>
+        <p class="lede">I build full-stack web apps and machine-learning systems, and I ship them with tests, CI and live demos you can open and try.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="assets/Madhur_Kumar_Rana_CV.pdf">Download CV (PDF)</a>
+          <a class="btn" href="https://github.com/madhur0770">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/madhur-rana-1a9b843a7">LinkedIn</a>
+          <a class="btn" href="mailto:madhur0770@gmail.com">Email me</a>
+        </div>
+      </div>
+      <div class="stack" aria-hidden="true">
+        <div class="win a"><div class="bar"><i></i><i></i><i></i></div><img src="assets/yolo.jpg" alt="" width="1140" height="1150"></div>
+        <div class="win b"><div class="bar"><i></i><i></i><i></i></div><img src="assets/graphcite.jpg" alt="" width="1400" height="911"></div>
+        <div class="win c"><div class="bar"><i></i><i></i><i></i></div><img src="assets/glaucoma.jpg" alt="" width="1128" height="621"></div>
+      </div>
     </div>
-    <figure class="figure">
-      <img src="assets/fundus-disc-cup.jpg" width="501" height="501" alt="A retina photograph with the optic disc outlined in cyan and the optic cup outlined in magenta by the glaucoma model">
-      <figcaption>Output of my glaucoma model on a held-out test photo: optic disc (cyan) and cup (magenta). The ratio of the two is a key sign of glaucoma.</figcaption>
-    </figure>
   </div>
 </header>
 
-<main>
-<section id="research">
+<div class="facts">
   <div class="wrap">
-    <h2>Research: glaucoma detection with deep learning</h2>
-    <p>M.Tech research at MNNIT Allahabad, supervised by Prof. Dharmendra Kumar Yadav, and ongoing. The system takes one fundus (retina) photograph, finds the optic disc, outlines the disc, cup and parapapillary atrophy, measures the cup-to-disc ratio, and returns a calibrated glaucoma probability with a heat map and an image-quality warning.</p>
-    <table class="compare">
-      <caption>Results from the project's own evaluation, compared with a re-implemented classical image-processing pipeline</caption>
-      <thead><tr><th scope="col">Measure</th><th scope="col">Classical</th><th scope="col">This system</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">Disc Dice / cup Dice (522 test photos)</th><td>0.771 / 0.448</td><td>0.978 / 0.904</td></tr>
-        <tr><th scope="row">Vertical cup-to-disc ratio error</th><td>0.178</td><td>0.031</td></tr>
-        <tr><th scope="row">Glaucoma AUC on clinical diagnoses (411 eyes)</th><td>0.602</td><td>0.877</td></tr>
-      </tbody>
-    </table>
-    <p>On RIGA-BinRushed, where six ophthalmologists graded every eye, out-of-fold accuracy against their consensus is 92.7%; the best single doctor scored 91.1%. All six networks run inside the browser, so a photo is never uploaded. This is a research prototype, not a medical device.</p>
-    <ul class="links" style="margin-top:0">
-      <li><a href="https://madhur0770.github.io/Glaucoma-using-DL/">Try the live demo</a></li>
-      <li><a href="https://github.com/madhur0770/Glaucoma-using-DL">Source code and results</a></li>
+    <ul>
+      <li>M.Tech, Artificial Intelligence and Data Science, MNNIT Allahabad</li>
+      <li>Lucknow, India</li>
+      <li>Open to software engineer, AI/ML and data science roles</li>
     </ul>
   </div>
-</section>
+</div>
 
-<section id="projects">
+<main>
+<section class="block" id="projects">
   <div class="wrap">
-    <h2>Projects</h2>
+    <div class="sec-head">
+      <h2>Projects</h2>
+      <p>Each one is public on GitHub with a README that lists its limits, and most have a live demo.</p>
+    </div>
 
-    <article class="row">
+    <article class="feature">
+      <div class="shots">
+        <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="assets/signal-chat.jpg" alt="Signal Clone chat screen with a conversation list and an open chat" width="1440" height="900"></div>
+        <img class="phone" src="assets/signal-phone.jpg" alt="Signal Clone on a phone-sized screen" width="780" height="1688">
+      </div>
       <div>
+        <span class="tag">Full-stack web app</span>
         <h3>Signal Clone</h3>
-        <p class="meta">Next.js, TypeScript, FastAPI, SQLModel, WebSockets</p>
-      </div>
-      <div>
-        <p>A Signal-style messenger with real-time one-to-one and group chat, read receipts, typing indicators, reactions, replies, attachments and disappearing messages. The backend has pytest tests, the frontend has Vitest and Playwright tests, and GitHub Actions runs them on every push. The frontend is on Vercel and the server on a free Render plan, so the first load after a quiet period can take up to 30 seconds.</p>
-        <ul class="l"><li><a href="https://signal-clone-liard.vercel.app">Live demo</a></li><li><a href="https://github.com/madhur0770/signal-clone">Source code</a></li></ul>
-      </div>
-    </article>
-
-    <article class="row">
-      <div>
-        <h3>GraphCite</h3>
-        <p class="meta">Python, Neo4j, Streamlit, LLM APIs</p>
-      </div>
-      <div>
-        <p>Multi-hop question answering over a knowledge graph. Every extracted relation keeps the sentence it came from, and each sentence of an answer is checked for a citation and for word-level support in the cited evidence. Unsupported statements are flagged instead of trusted. A demo mode runs without any model or database.</p>
-        <ul class="l"><li><a href="https://madhur0770.github.io/GraphCite/">Project page</a></li><li><a href="https://github.com/madhur0770/GraphCite">Source code</a></li></ul>
+        <p>A Signal-style messenger with real-time one-to-one and group chat.</p>
+        <ul class="points">
+          <li>Read receipts, typing indicators, reactions, replies, attachments and disappearing messages over WebSockets.</li>
+          <li>JWT sessions shared by the REST API and the WebSocket connection; an 8-table SQLModel schema.</li>
+          <li>pytest, Vitest and Playwright tests run in GitHub Actions. Frontend on Vercel, API on Render.</li>
+        </ul>
+        <ul class="chips"><li>Next.js</li><li>TypeScript</li><li>FastAPI</li><li>SQLModel</li><li>WebSockets</li></ul>
+        <div class="links"><a class="live" href="https://signal-clone-liard.vercel.app">Open live demo</a><a href="https://github.com/madhur0770/signal-clone">Source code</a></div>
+        <p class="note" style="margin-top:.9rem">The API runs on a free plan, so the first load after a quiet period can take up to 30 seconds.</p>
       </div>
     </article>
 
-    <article class="row">
-      <div>
-        <h3>YOLO Object Detection Studio</h3>
-        <p class="meta">Python, Ultralytics YOLO, OpenCV, Streamlit, Docker</p>
-      </div>
-      <div>
-        <p>Detects and counts objects in images, video and a live camera. Counting can be limited to a region of interest, tracking gives unique-object counts, and results export to CSV. It includes several YOLO models and a mask detector I trained myself. Tested on Windows and Linux in CI.</p>
-        <ul class="l"><li><a href="https://yoloobject-detection-3kou6hkum9kkpgnnb2benu.streamlit.app/">Live demo</a></li><li><a href="https://github.com/madhur0770/YOLO_Object-Detection">Source code</a></li></ul>
-      </div>
-    </article>
-
-    <article class="row">
-      <div>
+    <div class="grid">
+      <article class="card">
+        <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="assets/browserpilot.jpg" alt="BrowserPilot interface with example instructions and safety settings" width="1400" height="723"></div>
         <h3>BrowserPilot</h3>
-        <p class="meta">Python, Model Context Protocol, Playwright, Streamlit</p>
-      </div>
-      <div>
-        <p>Control a real browser with plain-English instructions. An LLM, either OpenAI or a local Ollama model, plans the steps and drives Playwright through the Model Context Protocol. Guardrails block loopback, private and cloud-metadata addresses before the agent starts.</p>
-        <ul class="l"><li><a href="https://madhur0770.github.io/BrowserPilot/">Project page</a></li><li><a href="https://github.com/madhur0770/BrowserPilot">Source code</a></li></ul>
-      </div>
-    </article>
+        <p>Control a real browser with plain-English instructions. An LLM (OpenAI or a local Ollama model) plans the steps and drives Playwright through the Model Context Protocol. Guardrails block private and cloud-metadata addresses before the agent starts.</p>
+        <ul class="chips"><li>Python</li><li>MCP</li><li>Playwright</li><li>Streamlit</li></ul>
+        <div class="links"><a class="live" href="https://madhur0770.github.io/BrowserPilot/">Project page</a><a href="https://github.com/madhur0770/BrowserPilot">Source code</a></div>
+      </article>
 
-    <article class="row">
-      <div>
+      <article class="card">
+        <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="assets/sprintpilot.jpg" alt="Terminal showing the SprintPilot offline demo report" width="1040" height="560"></div>
         <h3>SprintPilot</h3>
-        <p class="meta">PowerShell, Jira, Model Context Protocol</p>
+        <p>Sprint planning and Agile reports for Jira teams, run from PowerShell. Nine workflows, from backlog triage to retrospectives. Jira only changes when you pass an explicit flag, and an offline demo runs without Jira or an account.</p>
+        <ul class="chips"><li>PowerShell</li><li>Jira</li><li>MCP</li><li>CI</li></ul>
+        <div class="links"><a class="live" href="https://madhur0770.github.io/SprintPilot/">Project page</a><a href="https://github.com/madhur0770/SprintPilot">Source code</a></div>
+      </article>
+
+      <article class="card">
+        <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="assets/yolo.jpg" alt="YOLO Object Detection Studio detecting a bus and people with a region of interest" width="1140" height="1150"></div>
+        <h3>YOLO Object Detection Studio</h3>
+        <p>Detect and count objects in images, video and a live camera. Limit counting to a region of interest, track objects for unique counts and export CSV. Includes several YOLO models and a mask detector I trained myself.</p>
+        <ul class="chips"><li>Python</li><li>Ultralytics YOLO</li><li>OpenCV</li><li>Streamlit</li><li>Docker</li></ul>
+        <div class="links"><a class="live" href="https://yoloobject-detection-3kou6hkum9kkpgnnb2benu.streamlit.app/">Open live demo</a><a href="https://github.com/madhur0770/YOLO_Object-Detection">Source code</a></div>
+      </article>
+
+      <article class="card">
+        <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="assets/graphcite.jpg" alt="GraphCite answering a two-hop question with checked citations" width="1400" height="911"></div>
+        <h3>GraphCite</h3>
+        <p>Multi-hop question answering over a knowledge graph. Every relation keeps its source sentence, and each sentence of an answer is checked for a citation and for word-level support in it. Unsupported statements are flagged.</p>
+        <ul class="chips"><li>Python</li><li>Neo4j</li><li>Streamlit</li><li>LLM APIs</li></ul>
+        <div class="links"><a class="live" href="https://madhur0770.github.io/GraphCite/">Project page</a><a href="https://github.com/madhur0770/GraphCite">Source code</a></div>
+      </article>
+    </div>
+
+    <article class="feature flip">
+      <div class="shots">
+        <div class="win"><div class="bar"><i></i><i></i><i></i></div><img src="assets/glaucoma.jpg" alt="Glaucoma model output: optic disc and cup outlines and a heat map of where the network looked" width="1128" height="621"></div>
       </div>
       <div>
-        <p>Approval-gated sprint planning and Agile reporting for Jira teams, run from PowerShell. Nine workflows, from backlog triage to retrospective notes. Changes to Jira only happen with an explicit flag, and an offline demo shows a full run without Jira or an account.</p>
-        <ul class="l"><li><a href="https://madhur0770.github.io/SprintPilot/">Project page</a></li><li><a href="https://github.com/madhur0770/SprintPilot">Source code</a></li></ul>
+        <span class="tag">Machine-learning research, ongoing</span>
+        <h3>Glaucoma detection from retina photos</h3>
+        <p>My M.Tech research at MNNIT, supervised by Prof. Dharmendra Kumar Yadav. Deep-learning models outline the optic disc, cup and atrophy, measure the cup-to-disc ratio and return a glaucoma probability. The models run in the browser, so photos are never uploaded.</p>
+        <table class="compare">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Classical</th><th scope="col">Mine</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Disc / cup Dice</th><td>0.771 / 0.448</td><td>0.978 / 0.904</td></tr>
+            <tr><th scope="row">Cup-to-disc ratio error</th><td>0.178</td><td>0.031</td></tr>
+            <tr><th scope="row">Glaucoma AUC (411 eyes)</th><td>0.602</td><td>0.877</td></tr>
+          </tbody>
+        </table>
+        <ul class="chips"><li>PyTorch</li><li>U-Net</li><li>ONNX Runtime Web</li><li>scikit-learn</li></ul>
+        <div class="links"><a class="live" href="https://madhur0770.github.io/Glaucoma-using-DL/">Open live demo</a><a href="https://github.com/madhur0770/Glaucoma-using-DL">Source code</a></div>
+        <p class="note" style="margin-top:.9rem">A research prototype, not a medical device.</p>
       </div>
     </article>
   </div>
 </section>
 
-<section id="skills">
+<section class="block skills-bg" id="skills">
   <div class="wrap">
-    <h2>Skills</h2>
-    <dl class="skills">
-      <dt>Languages</dt><dd>Python, SQL, TypeScript, JavaScript, HTML, CSS, PowerShell</dd>
-      <dt>Machine learning</dt><dd>PyTorch, scikit-learn, OpenCV, Ultralytics YOLO, ONNX Runtime, timm</dd>
-      <dt>LLMs and data</dt><dd>Retrieval-augmented generation, Model Context Protocol, Neo4j, knowledge graphs, Ollama and OpenAI-compatible APIs</dd>
-      <dt>Web and backend</dt><dd>FastAPI, Next.js, SQLModel, SQLite, REST, WebSockets, JWT, Streamlit</dd>
-      <dt>Tools and practices</dt><dd>Git, GitHub Actions, Docker, pytest, Vitest, Playwright, Vercel, Render</dd>
-    </dl>
+    <div class="sec-head"><h2>Skills</h2><p style="color:#c9cff0">Tools I have used in the projects above.</p></div>
+    <div class="skills">
+      <div>
+        <h3>Software engineering</h3>
+        <ul class="chips"><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>PowerShell</li><li>HTML and CSS</li><li>FastAPI</li><li>Next.js</li><li>SQLModel</li><li>REST</li><li>WebSockets</li><li>JWT</li><li>Git</li><li>GitHub Actions</li><li>Docker</li><li>pytest</li><li>Vitest</li><li>Playwright</li><li>Vercel</li><li>Render</li></ul>
+      </div>
+      <div>
+        <h3>AI and machine learning</h3>
+        <ul class="chips"><li>PyTorch</li><li>OpenCV</li><li>Ultralytics YOLO</li><li>ONNX Runtime</li><li>timm</li><li>Retrieval-augmented generation</li><li>Model Context Protocol</li><li>Neo4j and knowledge graphs</li><li>Ollama and OpenAI-compatible APIs</li><li>Streamlit</li></ul>
+      </div>
+      <div>
+        <h3>Data science</h3>
+        <ul class="chips"><li>scikit-learn</li><li>Cross-validation</li><li>Calibration</li><li>ROC and AUC</li><li>DeLong test</li><li>Dice and segmentation metrics</li><li>SQL</li></ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="education" class="edu">
+<section class="block">
+  <div class="wrap about">
+    <div>
+      <h3>Education</h3>
+      <p><strong>M.Tech., Artificial Intelligence and Data Science</strong><br>Motilal Nehru National Institute of Technology (MNNIT) Allahabad, 2025 to present</p>
+      <p><strong>B.Tech., Information Technology</strong><br>KIET Group of Institutions (AKTU), Ghaziabad, 2024</p>
+    </div>
+    <div>
+      <h3>How I work</h3>
+      <p>I write tests, set up CI, and document what works and what does not. The README of each project lists its limits as well as its features.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block cta" id="contact">
   <div class="wrap">
-    <h2>Education</h2>
-    <p><strong>Motilal Nehru National Institute of Technology (MNNIT) Allahabad</strong><br><span class="sub">M.Tech. in Artificial Intelligence and Data Science, 2025 to present</span></p>
-    <p><strong>KIET Group of Institutions (AKTU), Ghaziabad</strong><br><span class="sub">B.Tech. in Information Technology, 2024</span></p>
+    <h2>Looking for a software engineer? Let's talk.</h2>
+    <p>I am open to software engineering, AI/ML and data science roles.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:madhur0770@gmail.com">madhur0770@gmail.com</a>
+      <a class="btn" href="assets/Madhur_Kumar_Rana_CV.pdf">Download CV (PDF)</a>
+      <a class="btn" href="https://www.linkedin.com/in/madhur-rana-1a9b843a7">LinkedIn</a>
+      <a class="btn" href="https://github.com/madhur0770">GitHub</a>
+    </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <p>Open to roles in AI/ML, data science and software engineering. Write to <a href="mailto:madhur0770@gmail.com">madhur0770@gmail.com</a> or find me on <a href="https://www.linkedin.com/in/madhur-rana-1a9b843a7">LinkedIn</a> and <a href="https://github.com/madhur0770">GitHub</a>.</p>
-  </div>
+  <div class="wrap">Madhur Kumar Rana, Lucknow, India</div>
 </footer>
 </body>
 </html>
